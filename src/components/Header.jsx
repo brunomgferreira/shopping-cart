@@ -1,11 +1,12 @@
-import React from 'react'
-import styled from 'styled-components'
-import { FaShoppingCart } from 'react-icons/fa'
-import { Link } from 'react-router-dom'
-import Button from './elements/Button'
+import React from 'react';
+import styled from 'styled-components';
+import { FaShoppingCart } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import Button from './elements/Button';
 
 
-const Header = () => {
+const Header = ( {quantity}) => {
   return (
     <HeaderWrapper>
       <Container>
@@ -16,9 +17,9 @@ const Header = () => {
           <NavbarLink to='/'>Home</NavbarLink>
           <NavbarLink to='/products'>Products</NavbarLink>
           <NavbarLink to='/contact'>Contact</NavbarLink>
-          <ButtonContainer /* onClick={ TO DO } */>
+          <ButtonContainer>
             <Button content={<FaShoppingCart />} shape='round' />
-            {/* TO DO QUANTITY */}
+            {quantity !== 0 && <Quantity>{quantity}</Quantity>}
           </ButtonContainer>
         </Navbar>
       </Container>
@@ -26,6 +27,9 @@ const Header = () => {
   )
 }
 
+Header.propTypes = {
+  quantity: PropTypes.number.isRequired
+}
 
 const HeaderWrapper = styled.header`
   background-color: ${({ theme }) => theme.colors.dark};
