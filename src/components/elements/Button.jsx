@@ -2,14 +2,14 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled, { css } from 'styled-components'
 
-const Button = ({onClick, content, size, shape, color, animation}) => {
+const Button = ({onClick, content, size, shape, color, $animation}) => {
   return (
     <ButtonWrapper
     onClick={onClick}
     size={size}
     shape={shape}
     color={color}
-    animation={animation}
+    $animation={$animation}
     >{content}</ButtonWrapper>
   )
 }
@@ -20,7 +20,7 @@ Button.propTypes = {
   shape: PropTypes.string,
   size: PropTypes.string,
   color: PropTypes.string,
-  animation: PropTypes.string,
+  $animation: PropTypes.string,
 }
 
 const ButtonWrapper = styled.button`
@@ -86,8 +86,8 @@ const ButtonWrapper = styled.button`
 
   /* ANIMATION */
 
-  ${({ animation }) =>
-    animation === 'scale' &&
+  ${({ $animation }) =>
+    $animation === 'scale' &&
     css`
       transition: transform 0.15s ease-in-out;
 
@@ -100,8 +100,8 @@ const ButtonWrapper = styled.button`
       }
     `}
 
-  ${({ animation }) =>
-    animation === 'color' &&
+  ${({ $animation }) =>
+    $animation === 'color' &&
     css`
       transition: background-color 0.15s ease-in-out;
 
