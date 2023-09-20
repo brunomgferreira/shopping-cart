@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react'
-import { v4 as uuidv4 } from 'uuid'
-import PropTypes from 'prop-types'
-import styled from 'styled-components'
-import ProductCard from './Products/ProductCard'
+import React, { useEffect, useState } from 'react';
+import { v4 as uuidv4 } from 'uuid';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
+import ProductCard from './Products/ProductCard';
 
 const Products = ({ addToCart }) => {
   const [products, setProducts] = useState([]);
@@ -44,6 +44,9 @@ const ProductsWrapper = styled.div`
   grid-template-columns: repeat(3, 1fr);
   gap: 4rem;
   margin-top: 4rem;
+  max-width: ${({ theme }) => theme.widths.content};
+  margin: 0 auto;
+  padding: 4rem;
 
   @media (max-width: 768px) {
     grid-template-columns: repeat(2, minmax(28rem, 36rem));
@@ -65,6 +68,5 @@ const ProductsWrapper = styled.div`
     }
   }
 `
-
 
 export default Products

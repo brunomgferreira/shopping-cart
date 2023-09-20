@@ -17,7 +17,7 @@ const Header = ( {quantity}) => {
           <NavbarLink to='/'>Home</NavbarLink>
           <NavbarLink to='/products'>Products</NavbarLink>
           <NavbarLink to='/contact'>Contact</NavbarLink>
-          <ButtonContainer>
+          <ButtonContainer to='/cart'>
             <Button content={<FaShoppingCart />} shape='round' />
             {quantity !== 0 && <Quantity>{quantity}</Quantity>}
           </ButtonContainer>
@@ -77,7 +77,8 @@ const NavbarLink = styled(Link)`
   }
 `
 
-const ButtonContainer = styled.div`
+const ButtonContainer = styled(Link)`
+  color: ${({ theme }) => theme.colors.dark};
   position: relative;
   cursor: pointer;
   transition: transform 0.15s ease-in-out;
