@@ -46,6 +46,7 @@ const ProductsWrapper = styled.div`
   margin-top: 4rem;
   max-width: ${({ theme }) => theme.widths.content};
   margin: 0 auto;
+  margin-bottom: 4rem;
   padding: 4rem;
 
   @media (max-width: 768px) {

@@ -68,6 +68,7 @@ const CartWrapper = styled.div`
     align-items: center;
     max-width: ${({ theme }) => theme.widths.content};
     margin: 0 auto;
+    margin-bottom: 10rem;
     gap: 4rem;
     height: 100%;
     padding-top: 6rem;

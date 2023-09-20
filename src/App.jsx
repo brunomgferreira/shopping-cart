@@ -62,7 +62,7 @@ function App() {
 
       </Router>
       
-      {/* <Footer /> */}
+      <Footer />
     </>
   )
 }
