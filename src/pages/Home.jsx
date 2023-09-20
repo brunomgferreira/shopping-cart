@@ -7,7 +7,7 @@ import Button from '../components/elements/Button'
 const Home = () => {
   return (
     <HomeWrapper>
-      <LinkWrapper to='/products'>
+      <LinkWrapper to='/shopping-cart/products'>
           <Button
             content="Shop now"
             size="big"
