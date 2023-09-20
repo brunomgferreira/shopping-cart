@@ -175,7 +175,7 @@ Error generating stack: `+i.message+`
           }
         `}
     `}
-`,Jd=({quantity:e})=>C.jsx(Y0,{children:C.jsxs(G0,{children:[C.jsx(Zr,{to:"/shopping-cart/",children:C.jsx(X0,{children:"FLOATATION"})}),C.jsxs(q0,{children:[C.jsx(ml,{to:"/",children:"Home"}),C.jsx(ml,{to:"/shopping-cart/products",children:"Products"}),C.jsx(ml,{to:"/shopping-cart/contact",children:"Contact"}),C.jsxs(Z0,{to:"/shopping-cart/cart",children:[C.jsx(Bt,{content:C.jsx(W1,{}),shape:"round"}),e!==0&&C.jsx(J0,{children:e})]})]})]})});Jd.propTypes={quantity:W.number.isRequired};const Y0=O.header`
+`,Jd=({quantity:e})=>C.jsx(Y0,{children:C.jsxs(G0,{children:[C.jsx(Zr,{to:"/",children:C.jsx(X0,{children:"FLOATATION"})}),C.jsxs(q0,{children:[C.jsx(ml,{to:"/shopping-cart/",children:"Home"}),C.jsx(ml,{to:"/shopping-cart/products",children:"Products"}),C.jsx(ml,{to:"/shopping-cart/contact",children:"Contact"}),C.jsxs(Z0,{to:"/shopping-cart/cart",children:[C.jsx(Bt,{content:C.jsx(W1,{}),shape:"round"}),e!==0&&C.jsx(J0,{children:e})]})]})]})});Jd.propTypes={quantity:W.number.isRequired};const Y0=O.header`
   background-color: ${({theme:e})=>e.colors.dark};
 `,G0=O.div`
   display: flex;
@@ -257,7 +257,7 @@ Error generating stack: `+i.message+`
   &:hover {
     transform: scale(1.2);
   }
-`,ng="assets/Travis-Scott-Nike-SB-Dunk-Small-e8411ec7.png",rg=()=>C.jsxs(og,{children:[C.jsx(ig,{to:"/shopping-cart/products",children:C.jsx(Bt,{content:"Shop now",size:"big",shape:"round",color:"primary",$animation:"scale"})}),C.jsx(lg,{src:ng})]}),og=O.div`
+`,ng="./assets/Travis-Scott-Nike-SB-Dunk-Small-e8411ec7.png",rg=()=>C.jsxs(og,{children:[C.jsx(ig,{to:"/products",children:C.jsx(Bt,{content:"Shop now",size:"big",shape:"round",color:"primary",$animation:"scale"})}),C.jsx(lg,{src:ng})]}),og=O.div`
   display: flex;
   align-items: start;
   justify-content: start;
@@ -491,7 +491,7 @@ Error generating stack: `+i.message+`
     display: flex;
     flex-direction: column;
     gap: 20px;
-`;function jg(){const[e,t]=_.useState({}),[n,r]=_.useState(0),o=l=>{const u=l.id,s=l.title,a=l.price,p=l.image;t(h=>{const m={...h};if(m[u].quantity===1)delete m[u];else{const g=m[u].quantity-1;m[u]={title:s,price:a,image:p,quantity:g}}return m}),r(h=>h-1)},i=l=>{const u=l.id,s=l.title,a=l.price,p=l.image;t(h=>{const m={...h};if(u in m){const g=m[u].quantity+1;m[u]={title:s,price:a,image:p,quantity:g}}else m[u]={title:s,price:a,image:p,quantity:1};return m}),r(h=>h+1)};return C.jsxs(C.Fragment,{children:[C.jsxs(F0,{children:[C.jsx(Jd,{quantity:n}),C.jsxs($0,{children:[C.jsx(pr,{exact:!0,path:"/",element:C.jsx(rg,{})}),C.jsx(pr,{exact:!0,path:"/products",element:C.jsx(tp,{addToCart:i})}),C.jsx(pr,{exact:!0,path:"/contact",element:C.jsx(yg,{})}),C.jsx(pr,{exact:!0,path:"/cart",element:C.jsx(rp,{cart:e,addToCart:i,removeFromCart:o})})]})]}),C.jsx(b0,{})]})}const Og=j1`
+`;function jg(){const[e,t]=_.useState({}),[n,r]=_.useState(0),o=l=>{const u=l.id,s=l.title,a=l.price,p=l.image;t(h=>{const m={...h};if(m[u].quantity===1)delete m[u];else{const g=m[u].quantity-1;m[u]={title:s,price:a,image:p,quantity:g}}return m}),r(h=>h-1)},i=l=>{const u=l.id,s=l.title,a=l.price,p=l.image;t(h=>{const m={...h};if(u in m){const g=m[u].quantity+1;m[u]={title:s,price:a,image:p,quantity:g}}else m[u]={title:s,price:a,image:p,quantity:1};return m}),r(h=>h+1)};return C.jsxs(C.Fragment,{children:[C.jsxs(F0,{children:[C.jsx(Jd,{quantity:n}),C.jsxs($0,{children:[C.jsx(pr,{exact:!0,path:"/shopping-cart/",element:C.jsx(rg,{})}),C.jsx(pr,{exact:!0,path:"/shopping-cart/products",element:C.jsx(tp,{addToCart:i})}),C.jsx(pr,{exact:!0,path:"/shopping-cart/contact",element:C.jsx(yg,{})}),C.jsx(pr,{exact:!0,path:"/shopping-cart/cart",element:C.jsx(rp,{cart:e,addToCart:i,removeFromCart:o})})]})]}),C.jsx(b0,{})]})}const Og=j1`
   *,
   *::before,
   *::after {
