@@ -54,10 +54,10 @@ function App() {
         <Header quantity={numberOfItemsInCart} />
 
         <Routes>
-          <Route exact path='/' element={<Home />} />
-          <Route exact path='/products' element={<Products addToCart={addToCart}/>} />
-          <Route exact path='/contact' element={<Contact />} />
-          <Route exact path='/cart' element={<Cart cart={cart} addToCart={addToCart} removeFromCart={removeFromCart}/>} />
+          <Route exact path='/shopping-cart/' element={<Home />} />
+          <Route exact path='/shopping-cart/products' element={<Products addToCart={addToCart}/>} />
+          <Route exact path='/shopping-cart/contact' element={<Contact />} />
+          <Route exact path='/shopping-cart/cart' element={<Cart cart={cart} addToCart={addToCart} removeFromCart={removeFromCart}/>} />
         </Routes>
 
       </Router>

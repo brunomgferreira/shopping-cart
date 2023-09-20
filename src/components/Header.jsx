@@ -14,10 +14,10 @@ const Header = ( {quantity}) => {
           <Logo>FLOATATION</Logo>
         </Link>
         <Navbar>
-          <NavbarLink to='/'>Home</NavbarLink>
-          <NavbarLink to='/products'>Products</NavbarLink>
-          <NavbarLink to='/contact'>Contact</NavbarLink>
-          <ButtonContainer to='/cart'>
+          <NavbarLink to='/shopping-cart/'>Home</NavbarLink>
+          <NavbarLink to='/shopping-cart/products'>Products</NavbarLink>
+          <NavbarLink to='/shopping-cart/contact'>Contact</NavbarLink>
+          <ButtonContainer to='/shopping-cart/cart'>
             <Button content={<FaShoppingCart />} shape='round' />
             {quantity !== 0 && <Quantity>{quantity}</Quantity>}
           </ButtonContainer>

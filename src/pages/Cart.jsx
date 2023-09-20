@@ -41,7 +41,7 @@ const Cart = ({ cart, addToCart, removeFromCart }) => {
                     color="primary"
                     $animation="color"
                 />
-                <Link to='/products'>
+                <Link to='/shopping-cart/products'>
                     <Button
                         content="Continue buying"
                         size="wide"

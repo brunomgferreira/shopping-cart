@@ -257,7 +257,7 @@ Error generating stack: `+i.message+`
   &:hover {
     transform: scale(1.2);
   }
-`,ng="./assets/Travis-Scott-Nike-SB-Dunk-Small-e8411ec7.png",rg=()=>C.jsxs(og,{children:[C.jsx(ig,{to:"/products",children:C.jsx(Bt,{content:"Shop now",size:"big",shape:"round",color:"primary",$animation:"scale"})}),C.jsx(lg,{src:ng})]}),og=O.div`
+`,ng="/assets/Travis-Scott-Nike-SB-Dunk-Small-e8411ec7.png",rg=()=>C.jsxs(og,{children:[C.jsx(ig,{to:"/products",children:C.jsx(Bt,{content:"Shop now",size:"big",shape:"round",color:"primary",$animation:"scale"})}),C.jsx(lg,{src:ng})]}),og=O.div`
   display: flex;
   align-items: start;
   justify-content: start;
