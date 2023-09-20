@@ -21,7 +21,7 @@ const ProductCard = ({ id, title, price, image, addToCart}) => {
           content="Add to cart"
           size="wide"
           color="dark"
-          animation="color"
+          $animation="color"
         />
       </Details>
     </ProductCardWrapper>

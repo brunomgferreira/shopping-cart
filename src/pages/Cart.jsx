@@ -3,6 +3,8 @@ import styled, { css } from 'styled-components';
 import { v4 as uuidv4 } from 'uuid';
 import PropTypes from 'prop-types'
 import CartItemCard from './Cart/CartItemCard';
+import Button from '../components/elements/Button';
+import { Link } from 'react-router-dom';
 
 const Cart = ({ cart, addToCart, removeFromCart }) => {
 
@@ -32,6 +34,22 @@ const Cart = ({ cart, addToCart, removeFromCart }) => {
                 {loadCartItems(cart)}
             </Products>
             <Total>Total:${calculateTotal(cart)}</Total>
+            <BttnsWrapper>
+                <Button
+                    content="Checkout"
+                    size="wide"
+                    color="primary"
+                    $animation="color"
+                />
+                <Link to='/products'>
+                    <Button
+                        content="Continue buying"
+                        size="wide"
+                        color="red"
+                        $animation="color"
+                    />
+                </Link>  
+            </BttnsWrapper>
         </CartWrapper>
     )
 
@@ -78,6 +96,12 @@ const Products = styled.div`
 const Total = styled.div`
     font-weight: bold;
     padding-top: 6rem;
+`
+
+const BttnsWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 `
 
 export default Cart

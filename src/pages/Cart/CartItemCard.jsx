@@ -20,14 +20,14 @@ const CartItemCard = ({ id, quantity, title, price, image, addToCart, removeFrom
               onClick={() => removeFromCart(product)}
               content={<FaMinus />}
               color="grey"
-              animation="color"
+              $animation="color"
             ></Button>
             <div>{quantity}</div>
             <Button
               onClick={() => addToCart(product)}
               content={<FaPlus />}
               color="grey"
-              animation="color"
+              $animation="color"
             ></Button>
           </AmountChanger>
           <Price>Total:${(price * quantity).toFixed(2)}</Price>
