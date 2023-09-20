@@ -10,7 +10,7 @@ const Header = ( {quantity}) => {
   return (
     <HeaderWrapper>
       <Container>
-        <Link to='/'>
+        <Link to='/shopping-cart/'>
           <Logo>FLOATATION</Logo>
         </Link>
         <Navbar>
