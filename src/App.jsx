@@ -7,6 +7,8 @@ import Products from './pages/Products'
 import Contact from './pages/Contact'
 import Cart from './pages/Cart'
 
+export const ShopContext = createContext(null);
+
 function App() {
   const [products, setProducts] = useState([]);
   const [cart, setCart] = useState({});
