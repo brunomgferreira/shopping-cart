@@ -1,12 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
 import { FaShoppingCart } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Button from './elements/Button';
+import { ShopContext } from '../App';
 
 
-const Header = ( {quantity}) => {
+const Header = () => {
+  const quantity = useContext(ShopContext).numberOfItemsInCart;
+
   return (
     <HeaderWrapper>
       <Container>
@@ -25,10 +28,6 @@ const Header = ( {quantity}) => {
       </Container>
     </HeaderWrapper>
   )
-}
-
-Header.propTypes = {
-  quantity: PropTypes.number.isRequired
 }
 
 const HeaderWrapper = styled.header`

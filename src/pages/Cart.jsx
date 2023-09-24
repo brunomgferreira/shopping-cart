@@ -1,12 +1,14 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import styled, { css } from 'styled-components';
 import { v4 as uuidv4 } from 'uuid';
 import PropTypes from 'prop-types'
 import CartItemCard from './Cart/CartItemCard';
 import Button from '../components/elements/Button';
 import { Link } from 'react-router-dom';
+import { ShopContext } from '../App';
 
-const Cart = ({ cart, addToCart, removeFromCart }) => {
+const Cart = () => {
+    const cart = useContext(ShopContext).cart;
 
     const calculateTotal = (cart) => {
         const itemsId = Object.keys(cart);
@@ -21,7 +23,7 @@ const Cart = ({ cart, addToCart, removeFromCart }) => {
             const title = cart[id].title;
             const price = cart[id].price;
             const image = cart[id].image;
-            return <CartItemCard key={uuidv4()} id={id} quantity={quantity} title={title} price={price} image={image} addToCart={addToCart} removeFromCart={removeFromCart} />
+            return <CartItemCard key={uuidv4()} id={id} quantity={quantity} title={title} price={price} image={image} />
         })
         return cartItems;
     }
@@ -53,12 +55,6 @@ const Cart = ({ cart, addToCart, removeFromCart }) => {
         </CartWrapper>
     )
 
-}
-
-Cart.propTypes = {
-    cart: PropTypes.object.isRequired,
-    addToCart: PropTypes.func.isRequired, 
-    removeFromCart: PropTypes.func.isRequired
 }
 
 const CartWrapper = styled.div`

@@ -1,12 +1,15 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { FaMinus, FaPlus } from 'react-icons/fa'
 import Button from '../../components/elements/Button'
+import { ShopContext } from '../../App'
 
-const CartItemCard = ({ id, quantity, title, price, image, addToCart, removeFromCart }) => {
+const CartItemCard = ({ id, quantity, title, price, image}) => {
   const product = {id:id, title: title, price: price, image: image};
-  
+  const addToCart = useContext(ShopContext).addToCart;
+  const removeFromCart = useContext(ShopContext).removeFromCart;
+
   return (
     <CartItemCardWrapper>
       <ImageContainer>
@@ -42,8 +45,6 @@ CartItemCard.propTypes = {
   price: PropTypes.number.isRequired,
   image: PropTypes.string.isRequired,
   quantity: PropTypes.number.isRequired,
-  addToCart: PropTypes.func.isRequired, 
-  removeFromCart: PropTypes.func.isRequired
 }
 
 const CartItemCardWrapper = styled.div`

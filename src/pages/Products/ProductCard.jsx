@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import Button from '../../components/elements/Button'
+import { ShopContext } from '../../App'
 
-const ProductCard = ({ id, title, price, image, addToCart}) => {
-  const product = { id, title, price, image }
+const ProductCard = ({ id, title, price, image}) => {
+  const product = { id, title, price, image };
+  const addToCart = useContext(ShopContext).addToCart;
 
   return (
     <ProductCardWrapper>
@@ -32,8 +34,7 @@ ProductCard.propTypes = {
   id: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
   price: PropTypes.number.isRequired,
-  image: PropTypes.string.isRequired,
-  addToCart: PropTypes.func.isRequired
+  image: PropTypes.string.isRequired
 }
 
 const ProductCardWrapper = styled.div`
